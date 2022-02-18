@@ -25,7 +25,7 @@ const TableForm = ({ addRow }: TableFunction) => {
     try {
       console.log("handleclicked");
       const { data: tableData } = await axios.post(
-        "http://localhost:8001/api/table/add",
+        `${process.env.REACT_APP_SERVER_API}/api/table/add`,
         {
           date,
           detail,

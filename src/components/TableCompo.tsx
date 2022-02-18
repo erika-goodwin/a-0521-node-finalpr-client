@@ -18,7 +18,7 @@ const TableCompo = ({ data, deleteRow }: TableCompoProps) => {
   const handleDelete = () => {
     const clickedId = data._id;
     console.log("handleDelete clicked/ id: ", clickedId);
-    fetch(`http://localhost:8001/api/table/${data._id}`, { method: "DELETE" })
+    fetch(`${process.env.REACT_APP_SERVER_API}/api/table/${data._id}`, { method: "DELETE" })
       .then()
       .catch((err: any) => console.log(err));
 

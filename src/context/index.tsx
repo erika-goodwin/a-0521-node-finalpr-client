@@ -27,7 +27,7 @@ const UserProvider = ({ children }: any) => {
 
   const fetchUser = async () => {
     const { data: response } = await axios.get(
-      "http://localhost:8001/api/auth/me"
+      `${process.env.REACT_APP_SERVER_API}/api/auth/me`
     );
 
     if (response.data && response.data.user) {

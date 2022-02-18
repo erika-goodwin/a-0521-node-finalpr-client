@@ -34,7 +34,7 @@ export const Table = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8001/api/table")
+    fetch(`${process.env.REACT_APP_SERVER_API}/api/table`)
       .then((res) => res.json())
       .then((res) => setTablesData(res))
       .catch((err) => console.log("err", err));

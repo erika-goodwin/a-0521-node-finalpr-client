@@ -30,11 +30,12 @@ function LoginModal({ text, variant, isSignupFlow }: ModalProps) {
   const [state, setState] = useContext(UserContext);
 
   const handleClick = async () => {
+    console.log("loginhandleclick");
     setShow(false);
     let response;
     if (isSignupFlow) {
       const { data: signUpData } = await axios.post(
-        "http://localhost:8001/api/auth/signup",
+        `${process.env.REACT_APP_SERVER_API}/api/auth/signup`,
         {
           name,
           email,
@@ -42,15 +43,20 @@ function LoginModal({ text, variant, isSignupFlow }: ModalProps) {
         }
       );
       response = signUpData;
+      console.log(`${process.env.REACT_APP_SERVER_API}/api/auth/signup`);
+      console.log(response);
     } else {
       const { data: loginData } = await axios.post(
-        "http://localhost:8001/api/auth/login",
+        `${process.env.REACT_APP_SERVER_API}/api/auth/login`,
         {
           email,
           password,
         }
       );
       response = loginData;
+
+      console.log(`${process.env.REACT_APP_SERVER_API}/api/auth/login`);
+      console.log(response);
     }
 
     if (response.errors.length) {
