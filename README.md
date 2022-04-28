@@ -8,7 +8,7 @@
 
 This is React(client)/Node(server) app with authorization function. I used typescript for both applications. The database is Mongodb with Mongoose. 
 
-  - **Speck:** React.ts [TS], Node.js [TS], Express, MongoDB/Mongoose, CSS, Netify
+  - **Spec:** React.ts [TS], Node.js [TS], Express, MongoDB/Mongoose, CSS, Netify
   - **Server Side:** [Click here](https://github.com/erika-goodwin/a-0521-node-finalpr-server/tree/master)  
   - **Check App:** [Check here](https://heuristic-perlman-0e7948.netlify.app/)
   
